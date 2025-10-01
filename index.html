@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storm Count Tracker</title>
+  <link rel="stylesheet" href="./styles/entry.css">
+  <link rel="icon" href="./assets/icon.png">
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- Fazer aqui botão para limpar os counters
+     com position relative, canto superior direito -->
+
+    <div class="storm-wrapper">
+      <div class="counter-container">
+        <p class="description">Storm Count</p>
+        <p class="number" id="storm-number">0
+          <!-- <img class="storm-animation active" src="./assets/animation/vortex.gif"> -->
+        </p>
+        <div class="clickable-area-left" onclick="handleChangeCount('storm', 'left')"></div>
+        <div class="clickable-area-right" onclick="handleChangeCount('storm', 'right')"></div>
+      </div>
+
+      <p class="infinite-icon-wrapper" onclick="handleInfiniteChange('storm')">∞</p>
+    </div>
+    <div class="mana-wrapper">
+      <div class="counter-container">
+        <p class="description">Mana</p>
+        <p class="number" id="mana-number">0</p>
+        <div class="clickable-area-left" onclick="handleChangeCount('mana', 'left')"></div>
+        <div class="clickable-area-right" onclick="handleChangeCount('mana', 'right')"></div>
+      </div>
+
+      <p class="infinite-icon-wrapper" onclick="handleInfiniteChange('mana')">∞</p>
+    </div>
+  </div>
+
+  <p class="go-fullscreen" id="go-fullscreen-button" onclick="goFullscreen()">Go Fullscreen</p>
+
+  <img src="./assets/crop-birgi.jpg" class="background-image">
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>

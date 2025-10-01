@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'MatrixBold';
+  src: url('../assets/fonts/MatrixBold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BelerenSmallCaps';
+  src: url('../assets/fonts/BelerenSmallCaps.ttf');
+  font-weight: normal;
+  font-style: normal;
+}

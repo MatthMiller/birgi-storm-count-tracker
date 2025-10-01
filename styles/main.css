@@ -1,0 +1,147 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.background-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+  /* Opção 2 */
+  filter: grayscale(100%) opacity(0.15);
+}
+
+.storm-wrapper, .mana-wrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.storm-wrapper {
+  flex: 1.3;
+  border-bottom: 1px solid #262626;
+}
+
+.mana-wrapper {
+  border-top: 1px solid #262626;
+}
+
+.description {
+  z-index: 3;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 12px;
+  position: relative;
+  color: #B7B7B7;
+  pointer-events: none;
+}
+
+/* Apenas o debaixo */
+.mana-wrapper .number {
+  margin-bottom: 16px;
+  color: #DD2D2D;
+}
+
+.number {
+  position: relative;
+  font-family: 'BelerenSmallCaps';
+  font-size: 42px;
+  line-height: 1;
+  text-align: center;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.clickable-area-right,
+.clickable-area-left {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  width: 50%;
+  z-index: 2;
+  transition: 200ms;
+  opacity: 0%;
+  background-color: #262626;
+}
+
+.clickable-area-left {
+  left: 0;
+}
+
+.clickable-area-right {
+  right: 0;
+}
+
+.clickable-area-right:active,
+.clickable-area-left:active {
+  opacity: 40%;
+}
+
+.storm-animation {
+  position: absolute;
+  min-width: 200px;
+  min-height: 200px;
+  opacity: 50%;
+  bottom: -80px;
+  left: -35%;
+  z-index: -1;
+
+  display: none;
+}
+
+.storm-animation.active {
+  display: block;
+}
+
+.infinite-icon-wrapper {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  font-family: 'BelerenSmallCaps';
+  line-height: 1;
+  font-size: 20px;
+
+  /* pointer-events: auto; */
+
+  z-index: 4;
+
+  background-color: #262626;
+  padding: 6px;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  padding-bottom: 8px;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  transition: 200ms;
+  border: 1px solid #7D7D7D;
+}
+
+.go-fullscreen {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  font-family: 'BelerenSmallCaps';
+  background-color: #262626;
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 1px solid #7D7D7D; 
+  z-index: 4;
+  transition: 200ms;
+}
+
+.go-fullscreen:active,
+.infinite-icon-wrapper:active {
+  background-color: #7D7D7D;
+}
